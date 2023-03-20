@@ -12,6 +12,11 @@ const routes = [
         path: '/search',
         name: 'search',
         component: Search
+    },
+    {
+        path: "/:catchAll(.*)",
+        name: "NotFound",
+        redirect: '/'
     }
 ]
 

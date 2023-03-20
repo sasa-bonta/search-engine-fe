@@ -8,7 +8,8 @@
     <v-row
         justify="center"
     >
-      <h1 id="system-name">Zebra Search</h1>
+      <h1 id="system-name">Zebra Search Home</h1>
+      <router-link :to="{ name: 'search'}">Go to Foo</router-link>
     </v-row>
     <v-row
         justify="center"
@@ -16,25 +17,15 @@
     >
       <v-col cols="3"></v-col>
       <v-col cols="6">
-        <!--        <v-autocomplete-->
-        <!--            clearable-->
-        <!--            label="What are you looking for?"-->
-        <!--            :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"-->
-        <!--            no-data-text="No suggestions"-->
-        <!--            :no-filter="true"-->
-        <!--            variant="solo"-->
-        <!--        ></v-autocomplete>-->
-        <v-sheet>
-          <v-text-field
-              v-model="search"
-              label="What are you looking for?"
-              hide-details
-          >
-            <template #append>
-              <v-btn variant="plain" prepend-icon="mdi-vuetify" class="mb-3 mr-3"> Go</v-btn>
-            </template>
-          </v-text-field>
-        </v-sheet>
+        <autocomplete />
+        <!--        <v-sheet>-->
+        <!--          <v-text-field-->
+        <!--              v-model="search"-->
+        <!--              label="What are you looking for?"-->
+        <!--              hide-details-->
+        <!--          >-->
+        <!--          </v-text-field>-->
+        <!--        </v-sheet>-->
       </v-col>
       <v-col cols="3"></v-col>
     </v-row>
@@ -42,43 +33,14 @@
 </template>
 
 <script>
-import {ref} from "vue";
+// import {ref} from "vue";
+import Autocomplete from "@/components/Autocomplete";
 
 export default {
-  name: 'HomeComponent',
-
-  setup() {
-    let search = ref('')
-
-    return {
-      search
-    }
-  }
+  components: {Autocomplete},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
-body {
-  background: url("/public/background.jpg");
-  background-size: cover;
-}
-
-img {
-  height: 45vh;
-}
-
-#system-name {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  color: transparent;
-}
 </style>

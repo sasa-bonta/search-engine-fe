@@ -8,7 +8,7 @@
     <v-row
         justify="center"
     >
-      <h1 id="system-name">Zebra Search</h1>
+      <h1 id="system-name">Search component</h1>
     </v-row>
     <v-row
         justify="center"
@@ -45,8 +45,6 @@
 import {ref} from "vue";
 
 export default {
-  name: 'SearchComponent',
-
   setup() {
     let search = ref('')
 
@@ -58,27 +56,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
-body {
-  background: url("/public/background.jpg");
-  background-size: cover;
-}
-
-img {
-  height: 45vh;
-}
-
-#system-name {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  color: transparent;
-}
 </style>
