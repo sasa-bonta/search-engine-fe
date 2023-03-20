@@ -45,6 +45,8 @@
 import {ref} from "vue";
 
 export default {
+  name: 'SearchComponent',
+
   setup() {
     let search = ref('')
 
