@@ -1,0 +1,7 @@
+version: '3.0'
+services:
+  parser:
+    image: sasabonta/lycos-parser
+    restart: always
+    ports:
+      - "8000:3000"
