@@ -19,8 +19,10 @@
         <v-autocomplete
             clearable
             label="What are you looking for?"
-            :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+            :items="[]"
             variant="solo"
+            no-data-text="No suggestions"
+            :no-filter="true"
         ></v-autocomplete>
       </v-col>
       <v-col cols="3"></v-col>
