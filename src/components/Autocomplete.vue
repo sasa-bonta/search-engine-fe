@@ -8,6 +8,8 @@
         no-data-text="No suggestions"
         variant="solo"
         hide-details
+        @input="loadSuggestions"
+        @change="goSurf"
     >
       <template #append>
         <v-btn
@@ -26,7 +28,8 @@
 import {useRoute} from "vue-router/dist/vue-router";
 import router from "@/router";
 import {useStore} from "vuex";
-import {onMounted, ref} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
+import store from "@/store";
 
 export default {
   name: "Autocomplete",
@@ -36,25 +39,30 @@ export default {
     const route = useRoute()
 
     let search = ref('')
-    let suggestions = ref([])
+    let suggestions = computed(() => store.getters.getSuggestions)
 
     onMounted(() => {
-      search.value = store.state.search
-      suggestions.value = store.state.suggestions
+      search.value = store.getters.getSearch
     })
 
     function goSurf() {
-      if (route.name !== 'search') {
+      if (search.value !== '' && route.name !== 'search') {
         router.push({name: 'search'})
       }
       store.commit('mutateSearch', search.value)
       store.dispatch('loadResults', search.value)
     }
 
+    function loadSuggestions() {
+      console.log("loading")
+      store.dispatch('loadSuggestions', search.value)
+    }
+
     return {
       search,
       suggestions,
       goSurf,
+      loadSuggestions,
     }
   }
 }

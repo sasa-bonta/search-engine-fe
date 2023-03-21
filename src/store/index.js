@@ -60,10 +60,10 @@ export default createStore({
         // ],
     },
     getters: {
-        getSearch: () => state.search,
-        getIsLoading: () => state.isLoading,
-        getSuggestions: () => state.suggestions,
-        getResults: () => state.results,
+        getSearch: (state) => state.search,
+        getIsLoading: (state) => state.isLoading,
+        getSuggestions: (state) => state.suggestions,
+        getResults: (state) => state.results,
     },
     actions: {
         async loadResults(store, searchStr) {
@@ -71,6 +71,10 @@ export default createStore({
             const results = await fetchResults(searchStr)
             store.commit('mutateResults', results.data)
             store.commit('mutateIsloading', false)
+        },
+        async loadSuggestions(store, searchStr) {
+            const results = await fetchResults(searchStr)
+            store.commit('mutateSuggestions', results.data)
         }
     },
     mutations: {

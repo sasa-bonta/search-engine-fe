@@ -28,8 +28,8 @@ export default {
   name: "ResultsList",
   components: {ResultsSkeleton},
   setup() {
-    let isLoading = computed(() => store.state.isLoading)
-    let results = computed(() => store.state.results)
+    let isLoading = computed(() => store.getters.getIsLoading)
+    let results = computed(() => store.getters.getResults)
 
     function visitLink(link) {
       window.open("https://" + link, '_blank').focus()
