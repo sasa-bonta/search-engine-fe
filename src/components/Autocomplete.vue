@@ -54,7 +54,6 @@ export default {
     }
 
     function loadSuggestions() {
-      console.log("loading")
       store.dispatch('loadSuggestions', search.value)
     }
 

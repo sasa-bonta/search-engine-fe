@@ -1,5 +1,5 @@
 import {createStore} from "vuex";
-import {fetchResults} from "@/api/api";
+import {fetchResults, fetchSuggestions} from "@/api/api";
 
 export default createStore({
     state: {
@@ -73,7 +73,7 @@ export default createStore({
             store.commit('mutateIsloading', false)
         },
         async loadSuggestions(store, searchStr) {
-            const results = await fetchResults(searchStr)
+            const results = await fetchSuggestions(searchStr)
             store.commit('mutateSuggestions', results.data)
         }
     },
