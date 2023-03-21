@@ -5,25 +5,24 @@
 </template>
 
 <script>
-import {ref, watch} from "vue";
-import {useRoute} from "vue-router";
-
-export default {
-  setup() {
-    let bgColor = ref('landscape')
-    const route = useRoute()
-
-    watch(route, (to) => {
-      bgColor = to.name === 'home' ? 'landscape' : 'white'
-      console.log(to.name)
-      console.log(bgColor)
-    })
-
-    return {
-      bgColor
-    }
-  }
-}
+// import {ref, watch} from "vue";
+// import {useRoute} from "vue-router";
+//
+// export default {
+//   setup() {
+//     let bgColor = ref('landscape')
+//     const route = useRoute()
+//
+//     watch(route, (to) => {
+//       console.log(to)
+//       confirm("ksjbvkhbs")
+//     })
+//
+//     return {
+//       bgColor
+//     }
+//   }
+// }
 </script>
 
 <style>

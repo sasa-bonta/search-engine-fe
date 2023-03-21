@@ -2,13 +2,12 @@
     <v-row
         justify="center"
     >
-      <img src="zebra.png" alt="zebra.jpg">
+      <img src="zebra.png" alt="zebra.png">
     </v-row>
     <v-row
         justify="center"
     >
       <h1 id="system-name">Zebra Search Home</h1>
-      <router-link :to="{ name: 'search'}">Go to Foo</router-link>
     </v-row>
     <v-row
         justify="center"
