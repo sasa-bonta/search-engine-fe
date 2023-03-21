@@ -15,7 +15,7 @@
     >
       <v-col cols="3"></v-col>
       <v-col cols="6">
-        <autocomplete />
+        <Autocomplete />
         <!--        <v-sheet>-->
         <!--          <v-text-field-->
         <!--              v-model="search"-->

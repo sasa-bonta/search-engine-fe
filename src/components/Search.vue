@@ -5,9 +5,9 @@
       <v-col lg="3" md="0"></v-col>
       <v-col lg="6" md="12">
         <v-card elevation="5" class="mb-5">
-          <autocomplete/>
+          <Autocomplete/>
         </v-card>
-        <results-list/>
+        <ResultsList/>
       </v-col>
       <v-col lg="3" md="0"></v-col>
     </v-row>
