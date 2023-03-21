@@ -2,7 +2,7 @@
 
   <v-card class="pa-5">
     <v-row>
-      <v-col lg="3" md="0" align="right">
+      <v-col align="right" lg="3" md="0">
         <router-link :to="{name: 'home'}">
           <img src="zebra.png" alt="zebra.png" height="100">
         </router-link>
