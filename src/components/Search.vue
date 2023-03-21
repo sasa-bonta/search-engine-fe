@@ -2,7 +2,11 @@
 
   <v-card class="pa-5">
     <v-row>
-      <v-col lg="3" md="0"></v-col>
+      <v-col lg="3" md="0" align="right">
+        <router-link :to="{name: 'home'}">
+          <img src="zebra.png" alt="zebra.png" height="100">
+        </router-link>
+      </v-col>
       <v-col lg="6" md="12">
         <v-card elevation="5" class="mb-5">
           <Autocomplete/>
