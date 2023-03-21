@@ -1,5 +1,4 @@
 <template>
-  <v-container>
     <v-row
         justify="center"
     >
@@ -29,7 +28,6 @@
       </v-col>
       <v-col cols="3"></v-col>
     </v-row>
-  </v-container>
 </template>
 
 <script>
@@ -41,6 +39,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+img {
+  height: 45vh;
+}
 
+#system-name {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 </style>

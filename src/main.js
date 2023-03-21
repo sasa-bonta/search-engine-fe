@@ -21,7 +21,7 @@ const vuetify = createVuetify({
 
 createApp(App)
     .use(router)
-    .use(VueRouter)
+    // .use(VueRouter)
     .use(vuetify)
     .use(axios)
     .use(store)
