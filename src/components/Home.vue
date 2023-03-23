@@ -13,24 +13,15 @@
         justify="center"
         align="center"
     >
-      <v-col cols="3"></v-col>
-      <v-col cols="6">
+      <v-col lg="3" md="0"></v-col>
+      <v-col lg="6" md="12">
         <Autocomplete />
-        <!--        <v-sheet>-->
-        <!--          <v-text-field-->
-        <!--              v-model="search"-->
-        <!--              label="What are you looking for?"-->
-        <!--              hide-details-->
-        <!--          >-->
-        <!--          </v-text-field>-->
-        <!--        </v-sheet>-->
       </v-col>
-      <v-col cols="3"></v-col>
+      <v-col lg="3" md="0"></v-col>
     </v-row>
 </template>
 
 <script>
-// import {ref} from "vue";
 import Autocomplete from "@/components/Autocomplete";
 
 export default {

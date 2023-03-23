@@ -2,7 +2,6 @@ import {createApp} from 'vue'
 import {default as store} from './store'
 import App from './App.vue'
 import axios from 'axios'
-import VueRouter from 'vue-router'
 
 import 'vuetify/styles';
 import {createVuetify} from 'vuetify';
@@ -21,7 +20,6 @@ const vuetify = createVuetify({
 
 createApp(App)
     .use(router)
-    // .use(VueRouter)
     .use(vuetify)
     .use(axios)
     .use(store)

@@ -14,4 +14,8 @@
   height: 100vh;
   background: url("/public/background.jpg") repeat-y;
 }
+
+.v-col {
+  flex-basis: auto !important;
+}
 </style>
